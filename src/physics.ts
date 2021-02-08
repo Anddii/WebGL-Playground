@@ -25,8 +25,17 @@ export class Physics {
         this.acceleration = [0, 0, 0]
 
         if (this.location[1] < -5) {
-            vec3.mul(this.velocity, this.velocity, [1, -0.8, 1])
+            vec3.mul(this.velocity, this.velocity, [1, -0.0, 1])
             this.location[1] = -5
+        }
+
+        if(this.location[1] == -5){
+            let friction: vec3 = [0,0,0]
+            vec3.copy(friction, this.velocity)
+            vec3.normalize(friction, friction)
+            const c: number = -0.1*deltaTime
+            vec3.mul(friction, friction, [c,c,c])
+            this.addForce(friction)
         }
 
         this.gameObject.transform.position = this.location
@@ -36,5 +45,9 @@ export class Physics {
         const f: vec3 = [0, 0, 0]
         vec3.div(f, force, [this.mass, this.mass, this.mass])
         vec3.add(this.acceleration, this.acceleration, f)
+    }
+
+    useGravity(gravity: boolean){
+        this.gravityScale = gravity == false ? 0 : -0.981
     }
 }
