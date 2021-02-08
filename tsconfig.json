@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "outDir": "./build",
+    "allowJs": false,
+    "moduleResolution": "node", // Tell tsc to look in node_modules for modules
+    "strict": true,             // Strict types, eg. prohibits `var x=0; x=null`
+    "target": "es6",
+    "noImplicitAny": false
+  },
+  "include": [
+    "./src/**/*"
+  ],
+  "exclude": ["node_modules"]
+}

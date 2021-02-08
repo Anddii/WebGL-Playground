@@ -1,0 +1,16 @@
+body {
+    background-color: rgb(205, 218, 218);
+    margin: 0px;
+    padding: 0px;
+
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+#demo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}

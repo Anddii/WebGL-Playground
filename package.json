@@ -1,0 +1,21 @@
+{
+  "name": "webgl-playground",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "start": "tsc --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/matter-js": "^0.14.10",
+    "gl-matrix": "^3.3.0",
+    "matter-js": "^0.16.1"
+  },
+  "devDependencies": {
+    "@types/gl-matrix": "^3.2.0"
+  },
+  "description": ""
+}
